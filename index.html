@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flyer Interactivo - MirHann</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Sombra intensa de texto e imágenes para máxima legibilidad flotante sobre el video */
+    .text-glow {
+      text-shadow: 0 3px 12px rgba(0,0,0,0.95), 0 0 6px rgba(0,0,0,0.9);
+    }
+    .icon-glow {
+      filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.85));
+    }
+    .logo-glow {
+      filter: drop-shadow(0px 2px 8px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.9));
+    }
+  </style>
+</head>
+<body class="bg-gray-950 min-h-screen flex items-center justify-center m-0 p-0 overflow-hidden font-sans">
+
+  <!-- CONTENEDOR PRINCIPAL DEL FLYER -->
+  <div class="relative w-full max-w-3xl h-screen flex flex-col justify-between shadow-2xl overflow-hidden border-x border-white/10">
+
+    <!-- VIDEO DE FONDO DENTRO DEL FLYER -->
+    <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover -z-10">
+      <source src="playeishon.mp4" type="video/mp4" />
+      Tu navegador no soporta videos en HTML5.
+    </video>
+
+    <!-- CAPA OSCURA SUAVE PARA RESALTAR TEXTOS -->
+    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/60 via-black/20 to-black/70 -z-10"></div>
+
+    <!-- ENCABEZADO SUPERIOR CON HOLIDAY INN ENTRE LA FRASE Y EL TÍTULO -->
+    <!-- ENCABEZADO SUPERIOR CON HOLIDAY INN MÁS GRANDE E IXTAPA MÁS PEQUEÑO -->
+    <header class="p-6 md:p-8 flex justify-between items-start gap-4">
+      <div class="flex flex-col items-start">
+        <!-- 1. FRASE SUPERIOR -->
+        <p class="text-xs md:text-sm font-bold text-teal-300 uppercase tracking-widest text-glow">
+          Te llevamos a tu próximo destino
+        </p>
+
+        <!-- 2. LOGO HOLIDAY INN AÚN MÁS GRANDE -->
+        <a href="hotel.html" class="my-1.5 inline-block hover:scale-105 transition transform" title="Ver detalles del Hotel">
+          <img src="holiday-inn-logo.png" alt="Holiday Inn" class="h-24 md:h-32 w-auto object-contain logo-glow" />
+        </a>
+
+        <!-- 3. TÍTULO IXTAPA MÁS PEQUEÑO -->
+        <h1 class="text-xl md:text-2xl font-bold tracking-wide text-white text-glow">
+          ¡Ixtapa!
+        </h1>
+      </div>
+      
+      <!-- LOGO DE MIRHANN -->
+      <div class="w-40 md:w-56 flex-shrink-0 flex items-center justify-end">
+        <img src="logo.png" alt="MirHann Agencia de Viajes" class="w-full h-auto object-contain icon-glow" />
+      </div>
+    </header>
+
+    <!-- ELEMENTOS FLOTANTES EN ZIG-ZAG -->
+    <section class="px-8 md:px-16 my-auto space-y-6 md:space-y-7">
+
+      <!-- 1. PRECIOS Y TARIFAS - IZQUIERDA -->
+      <div class="flex justify-start">
+        <div class="flex items-start gap-3.5 text-white hover:scale-105 transition transform">
+          <div class="w-11 h-11 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl icon-glow flex-shrink-0 mt-1">
+            <i class="fa-solid fa-tags"></i>
+          </div>
+          <div>
+            <h3 class="font-black text-2xl md:text-3xl text-amber-300 tracking-wide text-glow">Precios y Tarifas</h3>
+            <p class="text-sm md:text-base font-bold text-gray-100 text-glow mt-0.5">
+              Adulto: $8,340 (a partir de 13 años) | Menor: $1,800 (2 a 12 años)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. AUTOBÚS (CON LINK A autobus.html) - DERECHA -->
+      <div class="flex justify-end">
+        <a href="autobus.html" class="inline-flex items-center gap-3.5 text-white hover:scale-110 transition transform group">
+          <span class="font-black text-2xl md:text-3xl text-blue-300 tracking-wide text-glow group-hover:text-blue-200">Autobús</span>
+          <div class="w-11 h-11 rounded-2xl bg-blue-500 text-white flex items-center justify-center text-xl icon-glow group-hover:bg-blue-400">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+        </a>
+      </div>
+
+      <!-- 3. DESAYUNO A LA LLEGADA - IZQUIERDA -->
+      <div class="flex justify-start">
+        <div class="inline-flex items-center gap-3.5 text-white hover:scale-105 transition transform">
+          <div class="w-11 h-11 rounded-2xl bg-orange-500 text-white flex items-center justify-center text-xl icon-glow">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <span class="font-black text-2xl md:text-3xl text-orange-300 tracking-wide text-glow">Desayuno a la llegada</span>
+        </div>
+      </div>
+
+      <!-- 4. RESTAURANT & SNACKS (CON LINK A snacks.html) - DERECHA -->
+      <div class="flex justify-end">
+        <a href="snacks.html" class="inline-flex items-center gap-3.5 text-white hover:scale-110 transition transform group">
+          <span class="font-black text-2xl md:text-3xl text-teal-300 tracking-wide text-glow group-hover:text-teal-200">Restaurant & Snacks</span>
+          <div class="w-11 h-11 rounded-2xl bg-teal-400 text-white flex items-center justify-center text-xl icon-glow group-hover:bg-teal-300">
+            <i class="fa-solid fa-burger"></i>
+          </div>
+        </a>
+      </div>
+
+      <div class="flex justify-start">
+        <a href="cocteles.html" class="inline-flex items-center gap-3.5 text-white hover:scale-110 transition transform group">
+          <div class="w-11 h-11 rounded-2xl bg-purple-500 text-white flex items-center justify-center text-xl icon-glow group-hover:bg-purple-400">
+            <i class="fa-solid fa-martini-glass-citrus"></i>
+          </div>
+          <span class="font-black text-2xl md:text-3xl text-purple-300 tracking-wide text-glow group-hover:text-purple-200">Licuados Tropicales</span>
+        </a>
+      </div>
+
+      <!-- 5. NOCHE MEXICANA (CON LINK A noche_mexicana.html) - IZQUIERDA -->
+      <div class="flex justify-end">
+        <a href="noche_mexicana.html" class="inline-flex items-center gap-3.5 text-white hover:scale-110 transition transform group">
+          <div class="w-11 h-11 rounded-2xl bg-rose-500 text-white flex items-center justify-center text-xl icon-glow group-hover:bg-rose-400">
+            <i class="fa-solid fa-guitar"></i>
+          </div>
+          <span class="font-black text-2xl md:text-3xl text-rose-300 tracking-wide text-glow group-hover:text-rose-200">Noche Mexicana</span>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- PIE DE PÁGINA (INFORMES Y CONTACTO) -->
+    <footer class="p-6 md:p-8 text-center">
+      <p class="text-sm md:text-base text-gray-100 mb-2 font-bold text-glow">Informes y Cotizaciones:</p>
+      <a href="https://wa.me/524775597699?text=Hola,%20quisiera%20más%20información%20sobre%20el%20viaje%20a%20Ixtapa" 
+         target="_blank" 
+         class="inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold py-3.5 px-6 rounded-2xl shadow-2xl transition transform active:scale-95 text-base md:text-lg w-full max-w-md">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span>Contacto WhatsApp</span>
+      </a>
+    </footer>
+
+  </div>
+
+</body>
+</html>

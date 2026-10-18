@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Holiday Inn - MirHann</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Sombra intensa de texto e imágenes para máxima legibilidad flotante sobre el video */
+    .text-glow {
+      text-shadow: 0 3px 12px rgba(0,0,0,0.95), 0 0 6px rgba(0,0,0,0.9);
+    }
+    .icon-glow {
+      filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.85));
+    }
+    .logo-glow {
+      filter: drop-shadow(0px 2px 8px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.9));
+    }
+  </style>
+</head>
+<body class="bg-gray-950 min-h-screen flex items-center justify-center m-0 p-0 overflow-hidden font-sans">
+
+  <!-- CONTENEDOR PRINCIPAL DEL FLYER -->
+  <div class="relative w-full max-w-3xl h-screen flex flex-col justify-between shadow-2xl overflow-hidden border-x border-white/10">
+
+    <!-- VIDEO DE FONDO EXCLUSIVO DEL HOTEL -->
+    <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover -z-10">
+      <source src="hotel.mp4" type="video/mp4" />
+      Tu navegador no soporta videos en HTML5.
+    </video>
+
+    <!-- CAPA OSCURA SUAVE PARA RESALTAR TEXTOS -->
+    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/60 via-black/20 to-black/70 -z-10"></div>
+
+    <!-- ENCABEZADO SUPERIOR CON BOTÓN DE REGRESO -->
+    <header class="p-6 md:p-8 flex justify-between items-start gap-4">
+      <div class="flex flex-col items-start">
+        <!-- BOTÓN REGRESAR AL INDEX -->
+        <a href="index.html" class="inline-flex items-center gap-2 text-xs md:text-sm font-bold text-teal-300 hover:text-white uppercase tracking-widest text-glow mb-2 transition group">
+          <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition"></i>
+          <span>Volver al Flyer</span>
+        </a>
+
+        <!-- LOGO HOLIDAY INN PROTAGONISTA -->
+        <div class="my-1">
+          <img src="Holiday-Inn-Logo.png" alt="Holiday Inn" class="h-20 md:h-28 w-auto object-contain logo-glow" />
+        </div>
+
+        <!-- SUBTÍTULO IXTAPA -->
+        <p class="text-lg md:text-xl font-bold tracking-wide text-white text-glow">
+          Hospedaje en Ixtapa
+        </p>
+      </div>
+      
+      <!-- LOGO DE MIRHANN -->
+      <div class="w-40 md:w-56 flex-shrink-0 flex items-center justify-end">
+        <img src="logo.png" alt="MirHann Agencia de Viajes" class="w-full h-auto object-contain icon-glow" />
+      </div>
+    </header>
+
+    <!-- DETALLES DEL HOTEL TODOS ALINEADOS A LA IZQUIERDA -->
+    <section class="px-8 md:px-16 my-auto space-y-6 md:space-y-7">
+
+      <!-- CARACTERÍSTICA 1: PLAN TODO INCLUIDO -->
+      <div class="flex justify-start">
+        <div class="flex items-start gap-3.5 text-white hover:scale-105 transition transform text-left">
+          <div class="w-11 h-11 rounded-2xl bg-emerald-500 text-white flex items-center justify-center text-xl icon-glow flex-shrink-0 mt-0.5">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <div>
+            <h3 class="font-black text-2xl md:text-3xl text-emerald-300 tracking-wide text-glow">Plan Todo Incluido</h3>
+            <p class="text-sm md:text-base font-bold text-gray-100 text-glow">Comidas, bebidas y snacks ilimitados</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARACTERÍSTICA 2: HABITACIONES VISTA AL MAR -->
+      <div class="flex justify-start">
+        <div class="flex items-start gap-3.5 text-white hover:scale-105 transition transform text-left">
+          <div class="w-11 h-11 rounded-2xl bg-blue-500 text-white flex items-center justify-center text-xl icon-glow flex-shrink-0 mt-0.5">
+            <i class="fa-solid fa-bed"></i>
+          </div>
+          <div>
+            <h3 class="font-black text-2xl md:text-3xl text-blue-300 tracking-wide text-glow">Habitaciones Vista al Mar</h3>
+            <p class="text-sm md:text-base font-bold text-gray-100 text-glow">Confort, A/C y balcón privado</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARACTERÍSTICA 3: ALBERCAS Y ACCESO A PLAYA -->
+      <div class="flex justify-start">
+        <div class="flex items-start gap-3.5 text-white hover:scale-105 transition transform text-left">
+          <div class="w-11 h-11 rounded-2xl bg-teal-400 text-white flex items-center justify-center text-xl icon-glow flex-shrink-0 mt-0.5">
+            <i class="fa-solid fa-water-ladder"></i>
+          </div>
+          <div>
+            <h3 class="font-black text-2xl md:text-3xl text-teal-300 tracking-wide text-glow">Albercas y Acceso a Playa</h3>
+            <p class="text-sm md:text-base font-bold text-gray-100 text-glow">Áreas para niños y adultos</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PIE DE PÁGINA (COTIZAR HOTEL) -->
+    <footer class="p-6 md:p-8 text-center">
+      <p class="text-sm md:text-base text-gray-100 mb-2 font-bold text-glow">¿Quieres cotizar tus fechas en Holiday Inn?</p>
+      <a href="https://wa.me/524775597699?text=Hola,%20quisiera%20cotizar%20hospedaje%20en%20el%20Hotel%20Holiday%20Inn%20Ixtapa" 
+         target="_blank" 
+         class="inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold py-3.5 px-6 rounded-2xl shadow-2xl transition transform active:scale-95 text-base md:text-lg w-full max-w-md">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span>Cotizar Hotel por WhatsApp</span>
+      </a>
+    </footer>
+
+  </div>
+
+</body>
+</html>

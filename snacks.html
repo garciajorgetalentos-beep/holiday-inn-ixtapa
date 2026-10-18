@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant & Snacks - MirHann</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Sombra intensa de texto para máxima legibilidad sobre el collage */
+    .text-glow {
+      text-shadow: 0 3px 12px rgba(0,0,0,0.95), 0 0 6px rgba(0,0,0,0.9);
+    }
+    .icon-glow {
+      filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.85));
+    }
+  </style>
+</head>
+<body class="bg-gray-950 min-h-screen flex items-center justify-center m-0 p-0 overflow-hidden font-sans">
+
+  <!-- CONTENEDOR PRINCIPAL DEL FLYER -->
+  <div class="relative w-full max-w-3xl h-screen flex flex-col justify-between shadow-2xl overflow-hidden border-x border-white/10">
+
+    <!-- IMAGEN DE FONDO (COLLAGE) -->
+    <img src="collage.jpg" alt="Collage Restaurant & Snacks" class="absolute top-0 left-0 w-full h-full object-cover -z-10" />
+
+    <!-- CAPA OSCURA DEGRADADA PARA MEJORAR LECTURA DE TEXTOS -->
+    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-black/40 to-black/80 -z-10"></div>
+
+    <!-- ENCABEZADO SUPERIOR CON BOTÓN DE REGRESO -->
+    <header class="p-6 md:p-8 flex justify-between items-start gap-4">
+      <div class="flex flex-col items-start">
+        <!-- BOTÓN REGRESAR AL INDEX -->
+        <a href="index.html" class="inline-flex items-center gap-2 text-xs md:text-sm font-bold text-teal-300 hover:text-white uppercase tracking-widest text-glow mb-2 transition group">
+          <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition"></i>
+          <span>Volver al Flyer</span>
+        </a>
+
+        <!-- TÍTULO DE LA SECCIÓN -->
+        <h1 class="text-2xl md:text-4xl font-black tracking-tight text-white text-glow">
+          Restaurant & Snacks
+        </h1>
+        <p class="text-sm md:text-base font-bold text-amber-300 tracking-wide text-glow mt-0.5">
+          Gastronomía y Bebidas en Ixtapa
+        </p>
+      </div>
+      
+      <!-- LOGO DE MIRHANN -->
+      <div class="w-40 md:w-56 flex-shrink-0 flex items-center justify-end">
+        <img src="logo.png" alt="MirHann Agencia de Viajes" class="w-full h-auto object-contain icon-glow" />
+      </div>
+    </header>
+
+    <!-- PUNTOS DESTACADOS ALINEADOS A LA IZQUIERDA -->
+    <section class="px-8 md:px-16 my-auto space-y-6 md:space-y-7">
+
+      <!-- OPCIÓN 1: BUFFET Y RESTAURANTE -->
+      <div class="flex justify-start">
+        <div class="flex items-start gap-3.5 text-white hover:scale-105 transition transform text-left">
+          <div class="w-11 h-11 rounded-2xl bg-teal-500 text-white flex items-center justify-center text-xl icon-glow flex-shrink-0 mt-0.5">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div>
+            <h3 class="font-black text-2xl md:text-3xl text-teal-300 tracking-wide text-glow">Restaurante Buffet</h3>
+            <p class="text-sm md:text-base font-bold text-gray-100 text-glow">Variedad de platillos nacionales e internacionales</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPCIÓN 2: ÁREA DE SNACKS Y MARINA -->
+      <div class="flex justify-start">
+        <div class="flex items-start gap-3.5 text-white hover:scale-105 transition transform text-left">
+          <div class="w-11 h-11 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl icon-glow flex-shrink-0 mt-0.5">
+            <i class="fa-solid fa-burger"></i>
+          </div>
+          <div>
+            <h3 class="font-black text-2xl md:text-3xl text-amber-300 tracking-wide text-glow">Snacks & Marina</h3>
+            <p class="text-sm md:text-base font-bold text-gray-100 text-glow">Hamburguesas, hot dogs, botanas y bebidas junto a la alberca</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPCIÓN 3: BARRAS Y BEBIDAS -->
+      <div class="flex justify-start">
+        <div class="flex items-start gap-3.5 text-white hover:scale-105 transition transform text-left">
+          <div class="w-11 h-11 rounded-2xl bg-orange-500 text-white flex items-center justify-center text-xl icon-glow flex-shrink-0 mt-0.5">
+            <i class="fa-solid fa-martini-glass-citrus"></i>
+          </div>
+          <div>
+            <h3 class="font-black text-2xl md:text-3xl text-orange-300 tracking-wide text-glow">Barra Libre Nacional</h3>
+            <p class="text-sm md:text-base font-bold text-gray-100 text-glow">Cócteles, refrescos y bebidas ilimitadas</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PIE DE PÁGINA CON BOTÓN DE CONTACTO -->
+    <footer class="p-6 md:p-8 text-center">
+      <p class="text-sm md:text-base text-gray-100 mb-2 font-bold text-glow">¿Tienes dudas sobre los consumos del viaje?</p>
+      <a href="https://wa.me/524775597699?text=Hola,%20quisiera%20más%20información%20sobre%20el%20servicio%20de%20Restaurant%20y%20Snacks" 
+         target="_blank" 
+         class="inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold py-3.5 px-6 rounded-2xl shadow-2xl transition transform active:scale-95 text-base md:text-lg w-full max-w-md">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span>Consultar por WhatsApp</span>
+      </a>
+    </footer>
+
+  </div>
+
+</body>
+</html>
