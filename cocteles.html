@@ -21,7 +21,7 @@
 <body class="bg-gray-950 min-h-screen flex items-center justify-center m-0 p-0 overflow-y-auto font-sans">
 
   <!-- CONTENEDOR PRINCIPAL DEL FLYER -->
-  <div class="relative w-full max-w-3xl min-h-screen flex flex-col justify-between overflow-y-auto ...">
+  <div class="relative w-full max-w-3xl h-screen flex flex-col justify-between shadow-2xl overflow-hidden border-x border-white/10">
 
     <!-- VIDEO DE FONDO EXCLUSIVO DE BEBIDAS -->
     <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover -z-10">
@@ -60,14 +60,15 @@
     
 
     <!-- PIE DE PÁGINA CON BOTÓN DE CONTACTO -->
-    <footer class="p-6 md:p-8 text-center">
-      <p class="text-sm md:text-base text-gray-100 mb-2 font-bold text-glow">¿Tienes dudas sobre las bebidas del todo incluido?</p>
-      <a href="https://wa.me/524775597699?text=Hola,%20quisiera%20más%20información%20sobre%20el%20servicio%20de%20cocteles%20y%20bar" 
-         target="_blank" 
-         class="inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold py-3.5 px-6 rounded-2xl shadow-2xl transition transform active:scale-95 text-base md:text-lg w-full max-w-md">
-        <i class="fa-brands fa-whatsapp text-2xl"></i>
-        <span>Consultar por WhatsApp</span>
-      </a>
+     <!-- PIE DE PÁGINA CON BOTÓN DE CONTACTO -->
+    <footer class="p-3 pb-24 md:pb-6 text-center flex flex-col items-center flex-shrink-0">
+        <p class="text-[11px] md:text-xs font-semibold text-white/90 mb-1 text-shadow">Informes y Cotizaciones:</p>
+        <a href="https://wa.me/524775597699?text=Hola,%20quisiera%20cotizar%20el%20paquete%20a%20Ixtapa%20en%20Holiday%20Inn" 
+             target="_blank" 
+            class="w-full max-w-xs bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded-xl shadow-lg flex items-center justify-center gap-2 text-xs md:text-sm transition transform hover:scale-105 active:scale-95 border border-white/20">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Contacto WhatsApp</span>
+        </a>
     </footer>
 
   </div>
