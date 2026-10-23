@@ -21,6 +21,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- FontAwesome Íconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Font para Cursiva Elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700;1,900&display=swap" rel="stylesheet" />
   <style>
     /* Sombra intensa de texto e imágenes para máxima legibilidad flotante sobre el video */
     .text-glow {
@@ -51,7 +53,8 @@
     <!-- ENCABEZADO SUPERIOR CON HOLIDAY INN ENTRE LA FRASE Y EL TÍTULO -->
     <!-- ENCABEZADO SUPERIOR CON HOLIDAY INN MÁS GRANDE E IXTAPA MÁS PEQUEÑO -->
     <!-- ENCABEZADO SUPERIOR CON LOGOS ALINEADOS A AMBOS LADOS -->
-    <header class="p-3 md:p-6 flex justify-between items-start gap-2">
+    <!-- ENCABEZADO SUPERIOR -->
+    <header class="p-3 md:p-6 flex justify-between items-start gap-2 relative">
       <!-- COLUMNA IZQUIERDA -->
       <div class="flex flex-col items-start">
         <p class="text-[10px] md:text-sm font-bold text-teal-300 uppercase tracking-widest text-glow">
@@ -64,40 +67,57 @@
         </a>
 
         <h1 class="text-lg md:text-2xl font-bold tracking-wide text-white text-glow">
-          ¡Ixtapa! (clickea el logo para más info.👆)
+          ¡Ixtapa! <span class="text-xs md:text-sm font-normal text-gray-200">(clickea el logo para más info👆)</span>
         </h1>
-      </div> <!-- Aaquí va el </div> que faltaba para cerrar la columna izquierda -->
+      </div>
 
-      <!-- COLUMNA DERECHA (Logo MirHann y Fecha del viaje) -->
+      <!-- COLUMNA DERECHA -->
       <div class="w-28 md:w-56 flex-shrink-0 flex flex-col items-center justify-end text-center">
         <img src="logo.png" alt="MirHann Agencia de Viajes" class="w-full h-auto object-contain icon-glow" />
         
-        <!-- Fecha del viaje agregada debajo del logo -->
+        <!-- Fecha del viaje -->
         <p class="mt-1 text-[11px] md:text-sm font-extrabold text-amber-300 tracking-wide text-glow bg-black/40 px-2 py-0.5 rounded-lg border border-amber-400/30">
-          <i class="fa-solid fa-calendar-days text-[10px] md:text-xs mr-1 text-amber-400"></i> 8 al 11 Julio 2027
+          <i class="fa-solid fa-calendar-days text-[10px] md:text-xs mr-1 text-amber-400"></i>8 al 11 Julio 2027
         </p>
+
+        <!-- TODO INCLUIDO EN TIPOGRAFÍA CURSIVA ELEGANTE Y MÁS ABAJO -->
+        <span class="mt-5 md:mt-8 text-lg md:text-3xl font-black text-yellow-300 tracking-wider uppercase text-glow drop-shadow-[0_2px_10px_rgba(253,224,71,0.6)]" 
+              style="font-family: 'Playfair Display', serif; font-style: italic !important;">
+          Todo Incluido
+        </span>
       </div>
     </header>
 
     <!-- ELEMENTOS FLOTANTES EN ZIG-ZAG -->
   <!-- SECCIÓN DE OPCIONES (Alineación corregida y sin espacio excesivo abajo) -->
-<!-- SECCIÓN DE OPCIONES COMPACTADA EN MÓVIL -->
-<!-- SECCIÓN DE OPCIONES COMPACTADA EN MÓVIL -->
 <!-- SECCIÓN DE OPCIONES CON MENSAJE DE CLIC -->
 <section class="px-4 md:px-16 space-y-2 md:space-y-4 my-auto">
 
   <!-- 1. PRECIOS Y TARIFAS -->
-  <div class="flex justify-start">
-    <a href="cotizaciones.html" class="flex items-center gap-2.5 text-white hover:scale-105 transition transform">
-      <div class="w-8 h-8 md:w-11 md:h-11 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-base md:text-lg icon-glow flex-shrink-0">
+  <div class="flex justify-start w-full">
+    <a href="cotizaciones.html" class="flex items-start gap-2.5 text-white hover:scale-105 transition transform w-full max-w-xl">
+      <div class="w-8 h-8 md:w-11 md:h-11 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-base md:text-lg icon-glow flex-shrink-0 mt-1">
         <i class="fa-solid fa-tags"></i>
       </div>
-      <div>
-        <h2 class="text-sm md:text-xl font-bold text-amber-300 text-glow leading-tight">Tarifas</h2>
-        <p class="text-[11px] md:text-sm text-gray-100 font-medium text-shadow leading-tight">
-          Adulto: $8,340 <span class="text-[9px] md:text-xs opacity-90">(a partir de 13 años)</span> | Menor: GRATIS EN EL HOTEL, solo pagan bus $1,800 <span class="text-[9px] md:text-xs opacity-90">(2 a 12 años)</span>
-        </p>
-        <span class="text-[10px] md:text-xs text-amber-200 font-semibold text-glow block mt-0.5">da click aqui para mas info.👆</span>
+      <div class="flex-1">
+        <h2 class="text-base md:text-2xl font-black text-amber-300 text-glow leading-tight">
+          Tarifas
+        </h2>
+        
+        <!-- DETALLE DE PRECIOS MÁS GRANDE Y RESALTADO -->
+        <div class="mt-0.5 space-y-0.5 bg-black/30 p-2 rounded-xl border border-white/10 backdrop-blur-sm">
+          <p class="text-xs md:text-base font-extrabold text-white text-glow leading-tight">
+            Adulto: <span class="text-amber-300 text-sm md:text-lg font-black">$8,340</span> 
+            <span class="text-[10px] md:text-xs text-gray-200 font-medium">(a partir de 13 años)</span>
+          </p>
+          <p class="text-xs md:text-base font-extrabold text-emerald-300 text-glow leading-tight">
+            Menor: <span class="text-emerald-400 font-black">GRATIS EN HOTEL</span> 
+            <span class="text-white">| Solo bus:</span> <span class="text-amber-300 font-bold">$1,800</span> 
+            <span class="text-[10px] md:text-xs text-gray-200 font-medium">(2 a 12 años)</span>
+          </p>
+        </div>
+
+        <span class="text-[10px] md:text-xs text-amber-200 font-semibold text-glow block mt-1">da click aqui para mas info.👆</span>
       </div>
     </a>
   </div>
